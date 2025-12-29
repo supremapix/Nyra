@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { SERVICES } from '../constants';
+import { SERVICES } from '../constants.tsx';
 import { CheckCircle2, Box } from 'lucide-react';
 
 const ServiceCard: React.FC<{ service: any; idx: number }> = ({ service, idx }) => {
@@ -11,7 +12,6 @@ const ServiceCard: React.FC<{ service: any; idx: number }> = ({ service, idx }) 
       style={{ transitionDelay: `${idx * 150}ms` }}
     >
       <div className="flex flex-col h-full">
-        {/* Image Top (Mobile) / Side (Desktop) */}
         <div className="w-full h-64 md:h-80 overflow-hidden bg-deep-blue relative">
           {!imageError ? (
             <img 

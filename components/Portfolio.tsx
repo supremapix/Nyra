@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { PROJECTS } from '../constants';
+import { PROJECTS } from '../constants.tsx';
 
 const PortfolioItem: React.FC<{ project: any }> = ({ project }) => {
   const [offset, setOffset] = useState(0);
@@ -28,7 +28,6 @@ const PortfolioItem: React.FC<{ project: any }> = ({ project }) => {
       ref={containerRef}
       className="group relative h-[450px] overflow-hidden rounded-2xl border border-white/5 bg-[#0B192E]/20"
     >
-      {/* Parallax Image Container */}
       <div 
         className="absolute inset-0 w-full h-[120%] -top-[10%] will-change-transform"
         style={{ transform: `translateY(${offset}px)` }}
@@ -49,10 +48,8 @@ const PortfolioItem: React.FC<{ project: any }> = ({ project }) => {
         )}
       </div>
 
-      {/* Overlays */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0B192E] via-[#0B192E]/60 to-transparent opacity-90 group-hover:opacity-80 transition-opacity duration-500" />
       
-      {/* Content */}
       <div className="absolute bottom-0 left-0 p-8 w-full translate-y-6 group-hover:translate-y-0 transition-transform duration-500 z-10">
         <div className="flex items-center space-x-2 mb-3">
           <span className="w-8 h-px bg-tech-cyan"></span>
@@ -119,19 +116,6 @@ const Portfolio: React.FC = () => {
           {filteredProjects.map((project) => (
             <PortfolioItem key={project.id} project={project} />
           ))}
-        </div>
-        
-        <div className="mt-20 text-center reveal">
-          <p className="text-gray-500 mb-8 italic">Quer ver mais detalhes técnicos destes projetos?</p>
-          <a 
-            href="#contato" 
-            className="inline-flex items-center space-x-4 text-tech-cyan font-bold hover:text-white transition-colors group"
-          >
-            <span className="text-xl">Agendar apresentação técnica</span>
-            <span className="w-12 h-12 rounded-full border border-tech-cyan flex items-center justify-center group-hover:bg-tech-cyan transition-all">
-               →
-            </span>
-          </a>
         </div>
       </div>
     </section>

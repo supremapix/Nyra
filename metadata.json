@@ -1,0 +1,7 @@
+{
+  "name": "NYRA Corporation - Engenharia, Tecnologia & Energia",
+  "description": "Site institucional de alto impacto para a NYRA, especializada em construções modulares, energia limpa e mobilidade elétrica.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

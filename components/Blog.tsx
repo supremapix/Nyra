@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { BLOG_POSTS } from '../constants';
+import { BLOG_POSTS } from '../constants.tsx';
 import { Newspaper } from 'lucide-react';
 
 const BlogCard: React.FC<{ post: any; idx: number }> = ({ post, idx }) => {

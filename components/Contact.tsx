@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Phone, Mail, Instagram, MapPin, Send, MessageSquare } from 'lucide-react';
-import { CITIES } from '../constants';
+import { CITIES } from '../constants.tsx';
 
 const Contact: React.FC = () => {
   return (

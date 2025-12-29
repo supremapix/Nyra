@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { FAQ_DATA } from '../constants';
+import { FAQ_DATA } from '../constants.tsx';
 import { Plus, Minus } from 'lucide-react';
 
 const FAQ: React.FC = () => {

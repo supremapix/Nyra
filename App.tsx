@@ -13,6 +13,7 @@ import Blog from './components/Blog.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
 import WhatsAppButton from './components/WhatsAppButton.tsx';
+import Watermark from './components/Watermark.tsx';
 
 const HomePage: React.FC = () => {
   return (
@@ -33,7 +34,8 @@ const HomePage: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-[#1A1C22] text-white selection:bg-tech-cyan selection:text-white">
+      <div className="relative flex flex-col min-h-screen bg-[#1A1C22] text-white selection:bg-tech-cyan selection:text-white">
+        <Watermark />
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
